@@ -4,6 +4,7 @@ export function Page01() {
     return (
         <section>
             <h2>Memory of A Component</h2>
+            <h3>useState Hook</h3>
             <Button/>
         </section>
     )
@@ -24,10 +25,17 @@ function Button(){
 */
 
 function Button(){
+    // [stateVariable, setterFunction] = useState(initialvalue)
+    const [counter, setCounter] = useState(0);
+
     function handleClick(e){
-        
+        setCounter(counter + 1); // trigers a new render
     }
+
     return(
-        <button type="button" onClick={handleClick}>Button</button>
+        <button type="button" onClick={handleClick}>Button {counter}</button>
     )
 }
+
+// const [name, setName] = useState();
+// const[searchTerm, setSearchTerm] = useState();
