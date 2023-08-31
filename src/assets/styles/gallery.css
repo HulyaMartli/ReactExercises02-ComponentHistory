@@ -1,0 +1,23 @@
+.gallery {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1.5em;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.gallery > figure > img {
+    width: 200px;
+}
+
+.gallery > .button-container {
+    justify-content: flex-end;
+    display: flex;
+    
+}
+
+
+
