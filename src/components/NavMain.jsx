@@ -1,15 +1,21 @@
 import styles from "../assets/styles/NavMain.module.css"
 
-export const NavMain = ()=> {
+export const NavMain = ({setUrl})=> {
     return(
         <>
          <nav className={styles.NavMain}>
         <ul>
           <li>
-            <a href="#">Page 1</a>
+            <a href="#" onClick={(e)=>{
+              e.preventDefault();
+              setUrl("/01");
+            }}>Page 1</a>
           </li>
           <li>
-            <a href="#">Page 2</a>
+            <a href="#" onClick={(e)=>{
+              e.preventDefault();
+              setUrl("/02");
+            }}>Page 2</a>
           </li>
         </ul>
       </nav>

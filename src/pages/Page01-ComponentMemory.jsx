@@ -5,7 +5,7 @@ import "../assets/styles/gallery.css";
 export function Page01() {
     return (
         <section>
-            <h2>Memory of A Component</h2>
+            <h2>Page01: Memory of A Component</h2>
             <h3>useState Hook</h3>
             <Button />
             <Gallery />
@@ -76,8 +76,8 @@ function Gallery() {
     }
     return (
         <>
-            <h4>Gallery Example</h4>
             <div className="gallery">
+            <h4>Sculptures Gallery Example</h4>
                 <span>{index + 1} / {sculptureList.length}</span>
                 <div className="sculpture">
                 <h5>{sculptureList[index].name}</h5>
@@ -89,8 +89,8 @@ function Gallery() {
                 <p style={{display:displayDetail}}>{sculptureList[index].description}</p>
             <div className="button-container">
                 <button type="button" onClick={handleShowDetail}>Show/Hide Detail</button>
-                <button type="button" onClick={handlePrevious} disabled={index <= 0 ? true : false}>Previous Sculpture</button>
-                <button type="button" onClick={handleNext} disabled={index > sculptureList.length - 2 ? true : false}>Next Sculpture </button>
+                <button type="button" onClick={handlePrevious} disabled={index <= 0 ? true : false}>Previous</button>
+                <button type="button" onClick={handleNext} disabled={index > sculptureList.length - 2 ? true : false}>Next</button>
                 </div>
             </div>
         </>

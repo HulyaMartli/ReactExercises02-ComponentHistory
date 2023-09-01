@@ -1,9 +1,10 @@
 import { iconGithub } from "./Icons"
+import styles from "../assets/styles/NavFooter.module.css"
 
 export const NavFooter = () => {
   return (
     <>
-      <nav>
+      <nav className={styles.NavFooter}>
         <h2>Social Media</h2>
         <ul>
           <li>
