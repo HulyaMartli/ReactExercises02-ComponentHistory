@@ -41,8 +41,8 @@ function Button() {
 
     return (
         <>
-        <h4>Button Example</h4>
-        <button type="button" onClick={handleClick}>Button {counter}</button>
+            <h4>Button Example</h4>
+            <button type="button" onClick={handleClick}>Button {counter}</button>
         </>
     )
 }
@@ -68,29 +68,29 @@ function Gallery() {
     function handlePrevious() {
         setIndex(index - 1);
     }
-    function handleShowDetail(){
+    function handleShowDetail() {
         setDisplayDetail("block");
-        if(displayDetail==="block"){
+        if (displayDetail === "block") {
             setDisplayDetail("none");
         }
     }
     return (
         <>
             <div className="gallery">
-            <h4>Sculptures Gallery Example</h4>
+                <h4>Sculptures Gallery Example</h4>
                 <span>{index + 1} / {sculptureList.length}</span>
                 <div className="sculpture">
-                <h5>{sculptureList[index].name}</h5>
-                <figure>
-                    <img src={sculptureList[index].url} alt="" />
-                    <figcaption>Artist: {sculptureList[index].artist}</figcaption>
-                </figure>
+                    <h5>{sculptureList[index].name}</h5>
+                    <figure>
+                        <img src={sculptureList[index].url} alt="" />
+                        <figcaption>Artist: {sculptureList[index].artist}</figcaption>
+                    </figure>
                 </div>
-                <p style={{display:displayDetail}}>{sculptureList[index].description}</p>
-            <div className="button-container">
-                <button type="button" onClick={handleShowDetail}>Show/Hide Detail</button>
-                <button type="button" onClick={handlePrevious} disabled={index <= 0 ? true : false}>Previous</button>
-                <button type="button" onClick={handleNext} disabled={index > sculptureList.length - 2 ? true : false}>Next</button>
+                <p style={{ display: displayDetail }}>{sculptureList[index].description}</p>
+                <div className="button-container">
+                    <button type="button" onClick={handleShowDetail}>Show/Hide Detail</button>
+                    <button type="button" onClick={handlePrevious} disabled={index <= 0 ? true : false}>Previous</button>
+                    <button type="button" onClick={handleNext} disabled={index > sculptureList.length - 2 ? true : false}>Next</button>
                 </div>
             </div>
         </>
@@ -100,8 +100,8 @@ function Gallery() {
 function FormRegisterUser() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const fullName = firstName+" "+lastName
-    function handleSubmit(e){
+    const fullName = firstName + " " + lastName
+    function handleSubmit(e) {
         e.preventDefault();
         /* Bunu yapmayın. React'ta doma ulaşmak tercih edilmez
         const inputNameEl = document.querySelector("input[name=firstName]");
@@ -109,11 +109,11 @@ function FormRegisterUser() {
         */
     }
 
-    function handleFirstNameChange(e){
+    function handleFirstNameChange(e) {
         setFirstName(e.target.value);
     }
 
-    function handleLastNameChange(e){
+    function handleLastNameChange(e) {
         setLastName(e.target.value);
     }
 
@@ -121,8 +121,8 @@ function FormRegisterUser() {
         <>
             <h4>Register Form Example</h4>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="firstName" placeholder="First Name" value={firstName} onChange={handleFirstNameChange}/>
-                <input type="text" name="lastName" placeholder="Last Name" value={lastName} onChange={handleLastNameChange}/>
+                <input type="text" name="firstName" placeholder="First Name" value={firstName} onChange={handleFirstNameChange} />
+                <input type="text" name="lastName" placeholder="Last Name" value={lastName} onChange={handleLastNameChange} />
 
                 <button type="submit">Register</button>
 

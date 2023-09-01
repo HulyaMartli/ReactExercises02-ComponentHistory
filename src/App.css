@@ -7,6 +7,8 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--third--color);
+  color: var(--white--color);
 }
 
 :root {
@@ -39,7 +41,7 @@ a {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-main.light{
+body.light{
   color: var(--primary--color);
   background-color: var(--white--color);
   padding: var(--spacing-lg);
@@ -90,10 +92,6 @@ header {
   padding: 1.5em;
 }
 
-main {
-  color: var(--white--color);
-  background-color: var(--third--color);
-}
 
 button {
   background-color: var(--primary--color);

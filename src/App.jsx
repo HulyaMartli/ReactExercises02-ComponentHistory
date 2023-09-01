@@ -4,7 +4,7 @@ import { Logo } from './components/Logo'
 import { NavFooter } from './components/NavFooter'
 import { NavMain } from './components/NavMain'
 import { Page01 } from './pages/Page01-ComponentMemory'
-import { Page02 } from './pages/Page02'
+import { Page02 } from './pages/Page02-UpdatingObjectsInState'
 import { useState } from 'react'
 
 function App() {
