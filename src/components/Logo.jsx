@@ -1,3 +1,3 @@
 export function Logo(){
-    return <h1 className="logo"><a href="#">React</a></h1>
+    return <h1 className="logo"><a href="#">React | Concepts</a></h1>
 }

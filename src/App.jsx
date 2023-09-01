@@ -1,3 +1,4 @@
+import './assets/styles/reset.css'
 import './App.css'
 import { Logo } from './components/Logo'
 import { NavFooter } from './components/NavFooter'

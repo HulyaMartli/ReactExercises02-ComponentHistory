@@ -1,19 +1,41 @@
 * {
   box-sizing: border-box;
+  font-family: 'IBM Plex Mono', monospace;
+  text-align: center;
+  
 }
 
-#root {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
 
 :root {
   --primary--color: #1A1D23;
   --secondary--color: #097DA5;
   --third--color: #23272F;
   --white--color: #F6F7F9;
+  --spacing-sm: 8px;
+  --spacing-md:16px;
+  --spacing-lg:24px;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.logo{
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.logo {
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
 
 h1,
 h2 {
@@ -32,11 +54,6 @@ h3 {
   font-size: 24px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-
-}
 
 input {
   padding: 10px;
@@ -52,42 +69,20 @@ header {
   padding: 1em;
 }
 
-#root>header>nav>ul {
-
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-
-}
-
-#root>header>nav>ul>li>a {
-  border: 2px solid var(--secondary--color);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-#root>header>nav>ul>li>a:hover {
-  background-color: var(--secondary--color);
-  color: var(--white--color);
-  border-color: var(--white--color);
-  font-weight: bolder;
-}
-
 main {
-  padding: 1em;
   color: var(--white--color);
   background-color: var(--third--color);
+  padding: 1.5em;
 }
 
 footer {
   background-color: var(--primary--color);
   display: flex;
   justify-content: space-around;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 #root>footer>nav>ul>li>a {
-  background-color: var(--secondary--color);
   border-radius: 50%;
 }
 
@@ -108,43 +103,4 @@ button:hover {
   color: var(--white--color);
   font-weight: bolder;
   border: 2px solid var(--white--color);
-}
-
-
-
-.logo {
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
