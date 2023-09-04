@@ -17,6 +17,12 @@ export const NavMain = ({setUrl})=> {
               setUrl("/02");
             }}>Page 2</a>
           </li>
+          <li>
+            <a href="#" onClick={(e)=>{
+              e.preventDefault();
+              setUrl("/03");
+            }}>Page 3</a>
+          </li>
         </ul>
       </nav>
         </>

@@ -6,6 +6,7 @@ import { NavMain } from './components/NavMain'
 import { Page01 } from './pages/Page01-ComponentMemory'
 import { Page02 } from './pages/Page02-UpdatingObjectsInState'
 import { useState } from 'react'
+import { Page03 } from './pages/Page03-UpdatingArraysInState'
 
 function App() {
   const [url, setUrl] = useState("/01");
@@ -19,6 +20,7 @@ function App() {
       <main className='limited-width'>
         { url === "/01" && <Page01/>}
         { url === "/02" && <Page02/>}
+        { url === "/03" && <Page03/>}
       </main>
       <footer>
         <NavFooter />
